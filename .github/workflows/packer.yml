@@ -21,6 +21,9 @@ jobs:
         with:
           version: latest
 
+      - name: Initialize Packer (Download Plugins)
+        run: packer init packer.pkr.hcl
+
       - name: Validate Packer Template
         run: packer validate packer.pkr.hcl
 
